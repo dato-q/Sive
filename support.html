@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sive — Support</title>
+<meta name="description" content="Help with Sive for iPhone: contact, common questions, requirements, and how to manage your data.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D0D12" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314141A'/%3E%3Cpath d='M20.6 11.4c-.9-1-2.2-1.6-3.9-1.6-2.7 0-4.5 1.4-4.5 3.5 0 1.9 1.3 2.9 3.9 3.4l1.3.3c1.5.3 2.1.8 2.1 1.7 0 1.1-1 1.8-2.6 1.8-1.5 0-2.7-.6-3.5-1.7l-1.8 1.6c1.1 1.4 2.9 2.2 5.2 2.2 3 0 5-1.5 5-3.9 0-2-1.3-3.1-4.1-3.6l-1.3-.3c-1.4-.3-1.9-.7-1.9-1.5 0-1 .9-1.6 2.3-1.6 1.2 0 2.2.4 2.9 1.3z' fill='%23FAF9F5'/%3E%3C/svg%3E">
+
+<style>
+  :root {
+    --canvas: #FAF9F5;
+    --surface: #FFFFFF;
+    --surface-alt: #F0EEE8;
+    --ink: #14141A;
+    --ink-2: #5C5C66;
+    --ink-3: #94949E;
+    --hairline: #E4E1D9;
+    --measure: 34rem;
+    --radius: 14px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --canvas: #0D0D12;
+      --surface: #17171D;
+      --surface-alt: #202027;
+      --ink: #F4F3EE;
+      --ink-2: #9E9EA8;
+      --ink-3: #6B6B75;
+      --hairline: #2A2A33;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    letter-spacing: -0.006em;
+    font-feature-settings: "kern" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 0 1.5rem 6rem;
+  }
+
+  /* ---------- masthead ---------- */
+
+  header.masthead {
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 3.5rem;
+    padding: 2.25rem 0 2rem;
+  }
+
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .wordmark {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 7vw, 2.7rem);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+    margin: 0 0 0.9rem;
+    text-wrap: balance;
+  }
+
+  .meta {
+    color: var(--ink-3);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ---------- language switch ---------- */
+
+  .lang {
+    display: inline-flex;
+    background: var(--surface-alt);
+    border-radius: 999px;
+    padding: 3px;
+    gap: 2px;
+  }
+
+  .lang button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--ink-2);
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 140ms ease, color 140ms ease;
+  }
+
+  .lang button:hover { color: var(--ink); }
+
+  .lang button[aria-pressed="true"] {
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.07);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .lang button[aria-pressed="true"] { box-shadow: none; }
+  }
+
+  /* ---------- contact card ---------- */
+
+  .summary {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.5rem 1.25rem;
+    margin: 0 0 3rem;
+  }
+
+  .summary .label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 0.7rem;
+  }
+
+  .summary p { margin: 0 0 0.85rem; }
+  .summary p:last-child { margin-bottom: 0; }
+  .summary strong { font-weight: 650; }
+
+  .email {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 650;
+    letter-spacing: -0.015em;
+    word-break: break-all;
+  }
+
+  /* ---------- contents ---------- */
+
+  nav.toc { margin: 0 0 3.5rem; }
+
+  nav.toc h2 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 0.9rem;
+    padding: 0;
+    border: 0;
+  }
+
+  nav.toc ol {
+    list-style: none;
+    counter-reset: toc;
+    margin: 0;
+    padding: 0;
+    columns: 2;
+    column-gap: 1.75rem;
+  }
+
+  nav.toc li {
+    counter-increment: toc;
+    break-inside: avoid;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  nav.toc li::before {
+    content: counter(toc) ".";
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+    margin-right: 0.4rem;
+  }
+
+  nav.toc a {
+    color: var(--ink-2);
+    text-decoration: none;
+  }
+
+  nav.toc a:hover { color: var(--ink); text-decoration: underline; }
+
+  @media (max-width: 34rem) {
+    nav.toc ol { columns: 1; }
+  }
+
+  /* ---------- sections ---------- */
+
+  section { margin-bottom: 2.75rem; scroll-margin-top: 1.5rem; }
+
+  h2 {
+    font-size: 1.16rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    margin: 0 0 0.85rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--hairline);
+    position: relative;
+  }
+
+  h2 .num {
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+
+  /* Section numbers move into the margin when there's room. */
+  @media (min-width: 60rem) {
+    h2 .num {
+      position: absolute;
+      left: -3.25rem;
+      top: 1.5rem;
+      margin: 0;
+      text-align: right;
+      width: 2.5rem;
+    }
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 650;
+    letter-spacing: -0.012em;
+    line-height: 1.4;
+    margin: 1.6rem 0 0.5rem;
+  }
+
+  section > h3:first-of-type { margin-top: 0.4rem; }
+
+  p { margin: 0 0 1rem; }
+  p:last-child { margin-bottom: 0; }
+
+  ul { margin: 0 0 1rem; padding-left: 1.15rem; }
+  li { margin-bottom: 0.4rem; }
+  li::marker { color: var(--ink-3); }
+
+  strong { font-weight: 650; }
+
+  a { color: var(--ink); text-decoration-color: var(--ink-3); text-underline-offset: 0.16em; }
+  a:hover { text-decoration-color: var(--ink); }
+
+  .lede { color: var(--ink-2); }
+
+  /* ---------- footer ---------- */
+
+  footer {
+    border-top: 1px solid var(--hairline);
+    margin-top: 4rem;
+    padding-top: 1.75rem;
+    color: var(--ink-3);
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  footer p { margin: 0 0 0.4rem; }
+
+  .totop {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: var(--ink-2);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .totop:hover { color: var(--ink); }
+
+  [hidden] { display: none !important; }
+
+  @media print {
+    :root { --canvas: #fff; --surface: #fff; --ink: #000; --ink-2: #333; --ink-3: #666; --hairline: #ccc; }
+    body { font-size: 11pt; }
+    .lang, nav.toc, .totop { display: none; }
+    section { break-inside: avoid; }
+  }
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="bar">
+      <p class="wordmark">Sive</p>
+      <div class="lang" role="group" aria-label="Language / Langue">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+      </div>
+    </div>
+
+    <div data-content="en">
+      <h1>Support</h1>
+      <p class="meta">
+        Sive for iPhone · Last updated 12 August 2026
+      </p>
+    </div>
+
+    <div data-content="fr" hidden>
+      <h1>Assistance</h1>
+      <p class="meta">
+        Sive pour iPhone · Dernière mise à jour 12 août 2026
+      </p>
+    </div>
+  </header>
+
+  <!-- ============================== ENGLISH ============================== -->
+  <main data-content="en">
+
+    <div class="summary">
+      <p class="label">Get in touch</p>
+      <p><a class="email" href="mailto:sive.app282@gmail.com">sive.app282@gmail.com</a></p>
+      <p>Questions, bugs, feature requests — write to us. One person reads this address, and usually replies within a few days.</p>
+      <p class="lede">It helps to say which iPhone and which iOS version you're on, and, for a parsing problem, exactly what you typed.</p>
+    </div>
+
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#en-1">What Sive is</a></li>
+        <li><a href="#en-2">Requirements</a></li>
+        <li><a href="#en-3">The assistant is unavailable</a></li>
+        <li><a href="#en-4">Language</a></li>
+        <li><a href="#en-5">Dictation</a></li>
+        <li><a href="#en-6">Notifications</a></li>
+        <li><a href="#en-7">Your data &amp; iCloud</a></li>
+        <li><a href="#en-8">Deleting everything</a></li>
+        <li><a href="#en-9">Price</a></li>
+        <li><a href="#en-10">Reporting a bug</a></li>
+      </ol>
+    </nav>
+
+    <section id="en-1">
+      <h2><span class="num">1</span>What Sive is</h2>
+      <p>Sive turns everyday notes — typed or dictated — into calendar events, reminders and to-dos. Write the way you'd think out loud (“dentist tuesday at 3, buy milk, gym tomorrow morning”) and the assistant proposes the items it understood. Nothing is saved until you approve it.</p>
+      <p>The interpretation runs entirely on your iPhone. Sive has no servers and makes no network requests of its own — see the <a href="./">privacy policy</a>.</p>
+    </section>
+
+    <section id="en-2">
+      <h2><span class="num">2</span>Requirements</h2>
+      <ul>
+        <li><strong>iPhone with iOS 26</strong> or later.</li>
+        <li><strong>Apple Intelligence</strong>, turned on in iOS Settings. The assistant is Apple's on-device model; without it, the chat can't parse anything.</li>
+        <li>An iCloud account, if you want your plan backed up and carried to a new phone. This is optional.</li>
+      </ul>
+      <p>Everything outside the chat — the calendar, the to-do list, adding and editing items by hand — works without Apple Intelligence.</p>
+    </section>
+
+    <section id="en-3">
+      <h2><span class="num">3</span>The assistant says it's unavailable</h2>
+      <p>The chat shows a message explaining which condition isn't met. The usual ones:</p>
+      <ul>
+        <li><strong>Apple Intelligence is off</strong> — turn it on in iOS Settings → Apple Intelligence &amp; Siri.</li>
+        <li><strong>The model is still downloading</strong> — iOS fetches it in the background after you enable Apple Intelligence. Give it time on Wi-Fi and try again later.</li>
+        <li><strong>The device isn't supported</strong> — Apple Intelligence requires recent iPhone hardware. Nothing in the app can work around this.</li>
+        <li><strong>Not enough storage</strong>, or <strong>Low Power Mode</strong> — free some space, or turn Low Power Mode off.</li>
+      </ul>
+    </section>
+
+    <section id="en-4">
+      <h2><span class="num">4</span>Language</h2>
+      <p><strong>Sive is English-only.</strong> The interface and the assistant are both English; writing in another language will not parse reliably. Support for more languages is something we'd like to do properly rather than badly — write to us if you want one in particular.</p>
+    </section>
+
+    <section id="en-5">
+      <h2><span class="num">5</span>Dictation</h2>
+      <p>Tap the microphone in the message bar and speak; the text appears in the box, where you can edit it before sending. Sive uses <strong>on-device</strong> speech recognition, in English.</p>
+      <p>If nothing is transcribed, check that Microphone and Speech Recognition are allowed in iOS Settings → Sive, and that another app isn't holding the microphone.</p>
+    </section>
+
+    <section id="en-6">
+      <h2><span class="num">6</span>Notifications</h2>
+      <p>Reminders alert you at their time, and there's an optional daily morning recap of what the day holds. Calendar events don't notify by themselves — give one an advance notice (“remind me an hour before”) and Sive creates the reminder for it.</p>
+      <p>If nothing arrives: allow notifications in iOS Settings → Sive, and check that a Focus mode or Scheduled Summary isn't holding them back. Recap time and default advance notice are in the app's Settings → Notifications.</p>
+    </section>
+
+    <section id="en-7">
+      <h2><span class="num">7</span>Your data and iCloud</h2>
+      <p>Your events, reminders, to-dos and categories are stored on your iPhone and backed up to <strong>your own private iCloud</strong>, so they survive deleting the app and follow you to a new phone. We have no access to any of it.</p>
+      <p>Your conversation with the assistant stays on the device and is never synced.</p>
+      <p>To turn the backup off: iOS Settings → your Apple Account → iCloud → disable iCloud for Sive. If items don't appear on a second device, check that both are signed into the same Apple Account with iCloud Drive on, and that the app has been opened on each.</p>
+    </section>
+
+    <section id="en-8">
+      <h2><span class="num">8</span>Deleting everything</h2>
+      <p><strong>Settings → Data → Erase all data</strong> removes every event, reminder, to-do and message, and cancels the scheduled notifications. With sync on, it clears the iCloud copy too. Deleting the app removes the local copy; the iCloud copy is removed by erasing first, or from iOS Settings → your Apple Account → iCloud → Manage Account Storage.</p>
+    </section>
+
+    <section id="en-9">
+      <h2><span class="num">9</span>Price</h2>
+      <p><strong>Sive is free.</strong> There are no purchases inside it, no advertising, and no account to create. A paid version is planned later; if you're using Sive while it's free, the app works out on your device — from Apple's own record of when you first downloaded it — that your first year of that future subscription is free. Nothing is collected from you for that: no email, no sign-up, no list.</p>
+    </section>
+
+    <section id="en-10">
+      <h2><span class="num">10</span>Reporting a bug</h2>
+      <p>Write to <a href="mailto:sive.app282@gmail.com">sive.app282@gmail.com</a> with:</p>
+      <ul>
+        <li>your iPhone model and iOS version;</li>
+        <li>what you did, what you expected, what happened;</li>
+        <li>for a parsing problem, the exact text you sent and the items you got back — a screenshot is ideal.</li>
+      </ul>
+      <p>Don't include anything private in the screenshot; we don't need it, and we'd rather not have it.</p>
+    </section>
+
+    <footer>
+      <p>Sive — a planner that keeps your plans to itself.</p>
+      <p><a href="./">Privacy policy</a></p>
+      <a class="totop" href="#top">Back to top ↑</a>
+    </footer>
+
+  </main>
+
+  <!-- ============================== FRANÇAIS ============================== -->
+  <main data-content="fr" hidden>
+
+    <div class="summary">
+      <p class="label">Nous contacter</p>
+      <p><a class="email" href="mailto:sive.app282@gmail.com">sive.app282@gmail.com</a></p>
+      <p>Questions, anomalies, suggestions&nbsp;: écrivez-nous. Une seule personne lit cette adresse, et répond généralement sous quelques jours.</p>
+      <p class="lede">Précisez votre modèle d'iPhone et votre version d'iOS&nbsp;; pour un problème d'interprétation, indiquez le texte exact que vous avez saisi.</p>
+    </div>
+
+    <nav class="toc" aria-label="Sommaire">
+      <h2>Sommaire</h2>
+      <ol>
+        <li><a href="#fr-1">Ce qu'est Sive</a></li>
+        <li><a href="#fr-2">Prérequis</a></li>
+        <li><a href="#fr-3">L'assistant est indisponible</a></li>
+        <li><a href="#fr-4">Langue</a></li>
+        <li><a href="#fr-5">Dictée</a></li>
+        <li><a href="#fr-6">Notifications</a></li>
+        <li><a href="#fr-7">Vos données et iCloud</a></li>
+        <li><a href="#fr-8">Tout supprimer</a></li>
+        <li><a href="#fr-9">Prix</a></li>
+        <li><a href="#fr-10">Signaler une anomalie</a></li>
+      </ol>
+    </nav>
+
+    <section id="fr-1">
+      <h2><span class="num">1</span>Ce qu'est Sive</h2>
+      <p>Sive transforme des notes du quotidien — saisies ou dictées — en événements d'agenda, rappels et tâches. Écrivez comme vous pensez à voix haute («&nbsp;dentist tuesday at 3, buy milk, gym tomorrow morning&nbsp;») et l'assistant vous propose ce qu'il a compris. Rien n'est enregistré tant que vous ne l'avez pas validé.</p>
+      <p>L'interprétation s'exécute entièrement sur votre iPhone. Sive n'a aucun serveur et n'effectue aucune requête réseau qui lui soit propre — voir la <a href="./?lang=fr">politique de confidentialité</a>.</p>
+    </section>
+
+    <section id="fr-2">
+      <h2><span class="num">2</span>Prérequis</h2>
+      <ul>
+        <li>Un <strong>iPhone sous iOS 26</strong> ou version ultérieure.</li>
+        <li><strong>Apple Intelligence</strong>, activé dans les Réglages iOS. L'assistant repose sur le modèle embarqué d'Apple&nbsp;; sans lui, la conversation ne peut rien interpréter.</li>
+        <li>Un compte iCloud, si vous souhaitez sauvegarder votre organisation et la retrouver sur un nouveau téléphone. C'est facultatif.</li>
+      </ul>
+      <p>Tout ce qui se trouve hors de la conversation — l'agenda, la liste de tâches, l'ajout et la modification manuels — fonctionne sans Apple Intelligence.</p>
+    </section>
+
+    <section id="fr-3">
+      <h2><span class="num">3</span>L'assistant se déclare indisponible</h2>
+      <p>La conversation affiche un message précisant la condition non remplie. Les cas courants&nbsp;:</p>
+      <ul>
+        <li><strong>Apple Intelligence est désactivé</strong> — activez-le dans Réglages → Apple Intelligence et Siri.</li>
+        <li><strong>Le modèle est encore en cours de téléchargement</strong> — iOS le récupère en arrière-plan après activation. Laissez-lui le temps en Wi-Fi, puis réessayez.</li>
+        <li><strong>L'appareil n'est pas compatible</strong> — Apple Intelligence exige un iPhone récent. L'application ne peut rien y faire.</li>
+        <li><strong>Stockage insuffisant</strong>, ou <strong>mode économie d'énergie</strong> — libérez de l'espace, ou désactivez ce mode.</li>
+      </ul>
+    </section>
+
+    <section id="fr-4">
+      <h2><span class="num">4</span>Langue</h2>
+      <p><strong>Sive est uniquement en anglais.</strong> L'interface comme l'assistant sont anglophones&nbsp;; écrire dans une autre langue ne donnera pas de résultat fiable. Nous préférons ajouter d'autres langues correctement plutôt que mal — écrivez-nous si l'une d'elles vous manque.</p>
+    </section>
+
+    <section id="fr-5">
+      <h2><span class="num">5</span>Dictée</h2>
+      <p>Touchez le micro dans la barre de saisie et parlez&nbsp;; le texte apparaît dans le champ, où vous pouvez le corriger avant l'envoi. Sive utilise une reconnaissance vocale <strong>sur l'appareil</strong>, en anglais.</p>
+      <p>Si rien n'est transcrit, vérifiez que le micro et la reconnaissance vocale sont autorisés dans Réglages → Sive, et qu'aucune autre application ne monopolise le micro.</p>
+    </section>
+
+    <section id="fr-6">
+      <h2><span class="num">6</span>Notifications</h2>
+      <p>Les rappels vous alertent à leur heure, et un récapitulatif matinal quotidien est proposé en option. Les événements d'agenda ne notifient pas d'eux-mêmes&nbsp;: demandez un rappel en amont («&nbsp;remind me an hour before&nbsp;») et Sive le crée pour vous.</p>
+      <p>Si rien n'arrive&nbsp;: autorisez les notifications dans Réglages → Sive, et vérifiez qu'un mode de concentration ou un résumé programmé ne les retient pas. L'heure du récapitulatif et le délai de rappel par défaut se règlent dans Réglages → Notifications de l'application.</p>
+    </section>
+
+    <section id="fr-7">
+      <h2><span class="num">7</span>Vos données et iCloud</h2>
+      <p>Vos événements, rappels, tâches et catégories sont conservés sur votre iPhone et sauvegardés dans <strong>votre propre iCloud privé</strong>&nbsp;: ils survivent à la suppression de l'application et vous suivent sur un nouveau téléphone. Nous n'y avons aucun accès.</p>
+      <p>Votre conversation avec l'assistant reste sur l'appareil et n'est jamais synchronisée.</p>
+      <p>Pour désactiver la sauvegarde&nbsp;: Réglages iOS → votre compte Apple → iCloud → désactiver iCloud pour Sive. Si des éléments n'apparaissent pas sur un second appareil, vérifiez que les deux utilisent le même compte Apple avec iCloud Drive activé, et que l'application a été ouverte sur chacun.</p>
+    </section>
+
+    <section id="fr-8">
+      <h2><span class="num">8</span>Tout supprimer</h2>
+      <p><strong>Réglages → Données → Tout effacer</strong> supprime tous les événements, rappels, tâches et messages, et annule les notifications programmées. Synchronisation active, la copie iCloud est également effacée. Supprimer l'application retire la copie locale&nbsp;; la copie iCloud s'enlève en effaçant d'abord depuis l'application, ou via Réglages iOS → votre compte Apple → iCloud → Gérer le stockage du compte.</p>
+    </section>
+
+    <section id="fr-9">
+      <h2><span class="num">9</span>Prix</h2>
+      <p><strong>Sive est gratuite.</strong> Aucun achat intégré, aucune publicité, aucun compte à créer. Une version payante est prévue plus tard&nbsp;; si vous utilisez Sive pendant qu'elle est gratuite, l'application détermine sur votre appareil — à partir du relevé d'Apple indiquant la date de votre premier téléchargement — que votre première année de ce futur abonnement est offerte. Rien n'est collecté auprès de vous pour cela&nbsp;: ni adresse électronique, ni inscription, ni liste.</p>
+    </section>
+
+    <section id="fr-10">
+      <h2><span class="num">10</span>Signaler une anomalie</h2>
+      <p>Écrivez à <a href="mailto:sive.app282@gmail.com">sive.app282@gmail.com</a> en précisant&nbsp;:</p>
+      <ul>
+        <li>votre modèle d'iPhone et votre version d'iOS&nbsp;;</li>
+        <li>ce que vous avez fait, ce que vous attendiez, ce qui s'est produit&nbsp;;</li>
+        <li>pour un problème d'interprétation, le texte exact envoyé et les éléments obtenus — une capture d'écran est idéale.</li>
+      </ul>
+      <p>N'y faites pas figurer d'informations privées&nbsp;: nous n'en avons pas besoin, et préférons ne pas les recevoir.</p>
+    </section>
+
+    <footer>
+      <p>Sive — un agenda qui garde vos plans pour lui.</p>
+      <p><a href="./?lang=fr">Politique de confidentialité</a></p>
+      <a class="totop" href="#top">Haut de page ↑</a>
+    </footer>
+
+  </main>
+
+</div>
+
+<script>
+  // Language switch. No storage, no tracking — the initial choice comes from the
+  // browser's own language, and ?lang=fr / #fr let you link straight to a version.
+  (function () {
+    var buttons = document.querySelectorAll('.lang button');
+    var titles = { en: 'Sive — Support', fr: 'Sive — Assistance' };
+
+    function show(lang) {
+      document.querySelectorAll('[data-content]').forEach(function (el) {
+        el.hidden = el.getAttribute('data-content') !== lang;
+      });
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang));
+      });
+      document.documentElement.lang = lang;
+      document.title = titles[lang];
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { show(b.getAttribute('data-lang')); });
+    });
+
+    var requested = new URLSearchParams(location.search).get('lang');
+    if (!requested && location.hash.replace('#', '') === 'fr') requested = 'fr';
+    if (!requested && (navigator.language || '').toLowerCase().indexOf('fr') === 0) requested = 'fr';
+    if (requested === 'fr') show('fr');
+  })();
+</script>
+
+</body>
+</html>
