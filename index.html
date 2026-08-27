@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sive — Privacy Policy</title>
-<meta name="description" content="Sive runs entirely on your iPhone. No servers, no analytics, no tracking. This is the full privacy policy.">
+<meta name="description" content="What Sive stores on your iPhone, what the chat assistant sends to Google’s AI model, and what nobody keeps. The full privacy policy.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0D0D12" media="(prefers-color-scheme: dark)">
@@ -95,43 +95,6 @@
     font-size: 0.875rem;
     line-height: 1.5;
     margin: 0;
-  }
-
-  /* ---------- language switch ---------- */
-
-  .lang {
-    display: inline-flex;
-    background: var(--surface-alt);
-    border-radius: 999px;
-    padding: 3px;
-    gap: 2px;
-  }
-
-  .lang button {
-    appearance: none;
-    border: 0;
-    background: transparent;
-    color: var(--ink-2);
-    font: inherit;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    padding: 0.3rem 0.75rem;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: background 140ms ease, color 140ms ease;
-  }
-
-  .lang button:hover { color: var(--ink); }
-
-  .lang button[aria-pressed="true"] {
-    background: var(--surface);
-    color: var(--ink);
-    box-shadow: 0 1px 2px rgb(0 0 0 / 0.07);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .lang button[aria-pressed="true"] { box-shadow: none; }
   }
 
   /* ---------- summary card ---------- */
@@ -293,112 +256,125 @@
   @media print {
     :root { --canvas: #fff; --surface: #fff; --ink: #000; --ink-2: #333; --ink-3: #666; --hairline: #ccc; }
     body { font-size: 11pt; }
-    .lang, nav.toc, .totop { display: none; }
+    nav.toc, .totop { display: none; }
     section { break-inside: avoid; }
   }
 </style>
 </head>
-
 <body>
 <div class="wrap">
 
   <header class="masthead">
     <div class="bar">
       <p class="wordmark">Sive</p>
-      <div class="lang" role="group" aria-label="Language / Langue">
-        <button type="button" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" data-lang="fr" aria-pressed="false">FR</button>
-      </div>
     </div>
 
-    <div data-content="en">
-      <h1>Privacy Policy</h1>
-      <p class="meta">
-        Last updated 12 August 2026 · Applies to Sive for iPhone, version 1.0 and later
-      </p>
-    </div>
-
-    <div data-content="fr" hidden>
-      <h1>Politique de confidentialité</h1>
-      <p class="meta">
-        Dernière mise à jour 12 août 2026 · Concerne Sive pour iPhone, version 1.0 et suivantes
-      </p>
-    </div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">
+      Last updated 28 August 2026 · Applies to Sive for iPhone
+    </p>
   </header>
 
-  <!-- ============================== ENGLISH ============================== -->
-  <main data-content="en">
+  <main>
 
     <div class="summary">
       <p class="label">The short version</p>
-      <p>Sive runs entirely on your iPhone. It has no servers, makes no network requests, and contains no analytics, no advertising, no tracking and no third-party code of any kind. <strong>Nothing you type, say or save is sent to us</strong> — we have no way to receive it and no way to read it.</p>
-      <p>Your planner data is stored on your device and backed up to your own private iCloud account, which we cannot access.</p>
+      <p>Your plan — your events, reminders and to-dos — is stored on your iPhone and backed up to your own private iCloud. We never receive it, and we run no database about you.</p>
+      <p><strong>One part of Sive uses the internet: the chat assistant.</strong> To understand what you write, the message you send it is passed to an AI model operated by Google. §3 lists exactly what goes with it and §4 explains who handles it. <strong>Nothing you send is used to train anyone's AI model</strong>, and no message or reply is ever stored on our side.</p>
+      <p>Everything else — the calendar, the to-do list, adding and editing items by hand — works without the network.</p>
       <p class="lede">The detail is below. It's short.</p>
     </div>
 
     <nav class="toc" aria-label="Contents">
       <h2>Contents</h2>
       <ol>
-        <li><a href="#en-1">Who publishes Sive</a></li>
-        <li><a href="#en-2">What Sive does</a></li>
-        <li><a href="#en-3">Data we collect: none</a></li>
-        <li><a href="#en-4">Data stored on your iPhone</a></li>
-        <li><a href="#en-5">iCloud backup</a></li>
-        <li><a href="#en-6">Permissions</a></li>
-        <li><a href="#en-7">Purchases</a></li>
-        <li><a href="#en-8">The AI assistant</a></li>
-        <li><a href="#en-9">Children</a></li>
-        <li><a href="#en-10">Your rights</a></li>
-        <li><a href="#en-11">Automated decision-making</a></li>
-        <li><a href="#en-12">International transfers</a></li>
-        <li><a href="#en-13">Changes to this policy</a></li>
-        <li><a href="#en-14">Contact</a></li>
+        <li><a href="#s1">Who publishes Sive</a></li>
+        <li><a href="#s2">What Sive does</a></li>
+        <li><a href="#s3">What leaves your iPhone</a></li>
+        <li><a href="#s4">Who handles it</a></li>
+        <li><a href="#s5">What stays on your iPhone</a></li>
+        <li><a href="#s6">iCloud backup</a></li>
+        <li><a href="#s7">Permissions</a></li>
+        <li><a href="#s8">Purchases</a></li>
+        <li><a href="#s9">Legal bases</a></li>
+        <li><a href="#s10">International transfers</a></li>
+        <li><a href="#s11">Security</a></li>
+        <li><a href="#s12">Children</a></li>
+        <li><a href="#s13">Your rights</a></li>
+        <li><a href="#s14">Automated decision-making</a></li>
+        <li><a href="#s15">Changes to this policy</a></li>
+        <li><a href="#s16">Contact</a></li>
       </ol>
     </nav>
 
-    <section id="en-1">
+    <section id="s1">
       <h2><span class="num">1</span>Who publishes Sive</h2>
-      <p>Sive is published by <strong>Svitlana Doinikova</strong>, an individual developer in France.</p>
+      <p>Sive is published by <strong>Svitlana Doinikova</strong>, an individual developer in France, who is the data controller for the processing described here.</p>
       <ul>
         <li>Email: <a href="mailto:sive.app282@gmail.com">sive.app282@gmail.com</a></li>
       </ul>
-      <p>That address is the only way to reach us, and the only one you need — we hold no data about you to ask us for.</p>
-      <p>Apple distributes the app through the App Store. <strong>Sive is free</strong>; there is nothing to buy inside it (see §7).</p>
+      <p>That address is the only way to reach us, and the only one you need.</p>
+      <p>Apple distributes the app through the App Store, and Apple handles every purchase (see §8).</p>
     </section>
 
-    <section id="en-2">
+    <section id="s2">
       <h2><span class="num">2</span>What Sive does</h2>
-      <p>Sive turns everyday notes — typed or dictated — into calendar events, reminders and to-dos. The interpretation is done by an artificial-intelligence model that runs on your iPhone. You review and approve every result before anything is saved.</p>
+      <p>Sive turns everyday notes — typed or dictated — into calendar events, reminders and to-dos. The interpretation is done by an artificial-intelligence model. You review and approve every result before anything is saved.</p>
+      <p><strong>That model runs in the cloud</strong>, at Google, and the message you send is passed to it. This is described in §3 and §4.</p>
+      <p>When your iPhone has no usable connection, Sive can fall back to Apple's model running <strong>on the device</strong> instead. That fallback is available only on iPhones that support Apple Intelligence, it can be switched off in <strong>Settings → Sive Assistant</strong>, and a reply produced that way is labelled in the conversation. Nothing leaves your iPhone when it answers.</p>
+      <p><strong>This is a change from earlier versions of Sive</strong>, which interpreted everything on the device and made no network requests at all. If you are reading an older description of the app that says so, this page supersedes it.</p>
     </section>
 
-    <section id="en-3">
-      <h2><span class="num">3</span>Data we collect: none</h2>
-      <p>We operate no server. The app contains no analytics SDK, no crash-reporting SDK, no advertising SDK, no tracking technology and no third-party libraries at all. It sends nothing to us, because there is nowhere for it to send anything.</p>
-      <p>Concretely, we do not collect, receive, store, sell or share:</p>
+    <section id="s3">
+      <h2><span class="num">3</span>What leaves your iPhone</h2>
+      <p>Only the chat assistant uses the network, and only when you send it a message. Here is exactly what travels with that message.</p>
+      <p><strong>Sent:</strong></p>
       <ul>
-        <li>anything you type or dictate into the app;</li>
-        <li>your events, reminders, to-dos or categories;</li>
-        <li>your conversation with the assistant;</li>
-        <li>identifiers, device information, usage statistics, your location or your contacts.</li>
+        <li><strong>the text of your message</strong> — typed, or dictated and transcribed on your device;</li>
+        <li><strong>the current date and time</strong> on your iPhone, so that “tomorrow at 8” can be worked out;</li>
+        <li><strong>up to the last four messages of the conversation</strong>, yours and the assistant's, shortened;</li>
+        <li><strong>a list of your saved items — but not with every message.</strong> When your message might be <em>about</em> something already saved, the assistant is given your saved events, reminders and to-dos: their titles, dates and times, the place or description attached to them, the entries of a to-do list, and whether each one is done. It cannot answer “when am I seeing the dentist?” or find the thing you asked it to move otherwise. That covers questions, changes and cancellations, and also short messages the app cannot confidently place. <strong>A message it can see is simply a new note — a long brain dump, or one that opens “remind me to…” — goes on its own, with no list.</strong></li>
       </ul>
-      <p>The only network activity the app can cause is Apple's own: opening a link in your browser (this policy, or the App Store), the iCloud synchronisation described in §5, and iOS asking the App Store whether you hold a subscription (§7). All three go to Apple, under your agreement with Apple. None of them reach us.</p>
+      <p><strong>Never sent:</strong></p>
+      <ul>
+        <li>your name, your email address, your Apple Account, or anything else that identifies you;</li>
+        <li>device identifiers, advertising identifiers, your location, your contacts or your photos;</li>
+        <li>usage statistics or analytics of any kind — the app contains no analytics SDK, no crash-reporting SDK, no advertising SDK, no tracking technology and no third-party library at all;</li>
+        <li>your conversation as a whole, or your planner as a whole — only what the list above describes, for the one message you just sent.</li>
+      </ul>
+      <p><strong>Some messages never leave the iPhone at all.</strong> A message the app can tell is not about planning — arithmetic, a translation, the weather, a recipe — and input it cannot make sense of are both recognised and answered on the device, without a request being made.</p>
+      <p><strong>And the rest of the app never uses the network.</strong> The calendar, the to-do list, the home screen, and adding or editing any item by hand are entirely local. If you would rather send nothing at all, use those and leave the chat alone — the app is fully usable that way.</p>
+      <p>The only other network activity the app can cause is Apple's own: opening a link in your browser (this policy, or the App Store), the iCloud synchronisation described in §6, and iOS asking the App Store whether your purchase is valid (§8). Those go to Apple, under your agreement with Apple.</p>
       <p>If you have turned on <strong>Share iPhone Analytics with App Developers</strong> in iOS Settings, Apple may give us aggregated, anonymous crash and performance reports about the app. These come from Apple, contain no personal information, and cannot be traced back to you. You can turn that off in iOS Settings → Privacy &amp; Security → Analytics &amp; Improvements.</p>
     </section>
 
-    <section id="en-4">
-      <h2><span class="num">4</span>Data stored on your iPhone</h2>
-      <p>Everything you create stays in the app's own storage on the device:</p>
+    <section id="s4">
+      <h2><span class="num">4</span>Who handles it</h2>
+      <p>Two companies are involved in that round trip. Neither keeps anything of yours afterwards, and neither is given anything that identifies you.</p>
+
+      <p><strong>Google</strong> — the model is Gemini, operated by Google, and it is what actually reads your message and produces the proposal or the answer. We use the <strong>paid</strong> Gemini API, which matters: under its terms <strong>your content is not used to train or improve Google's models</strong>, and it is not read by people in the ordinary course of business. Google retains it only for a short period, to detect abuse and to meet its legal obligations, and then deletes it. Google's terms are at <a href="https://ai.google.dev/gemini-api/terms">ai.google.dev/gemini-api/terms</a>.</p>
+
+      <p><strong>Cloudflare</strong> — the request does not go to Google directly. It passes through a small relay we operate on Cloudflare's network, and it exists for one reason: the credential that authorises the call to Google cannot safely be placed inside an app on your phone, so it lives on the relay instead. The relay checks that the request comes from a valid Sive purchase, counts it, and forwards it.</p>
+      <p><strong>The relay never stores or logs your message or the reply.</strong> No message text, no answer text, ever — not in a database, not in a log line. What it does store is a call counter, so that a single purchase cannot run up an unbounded bill. That counter is kept against a <strong>one-way salted hash</strong> of the purchase identifier Apple gives your app, which means we can see that some purchase made a number of calls this month and cannot work back from it to a purchase, an Apple Account or a person.</p>
+      <p>To prove you are entitled to use the assistant, your app sends that Apple-signed purchase record with each request. It contains no name, no email address and no payment information — Apple does not put them in it — and we keep only the hash just described.</p>
+
+      <p>Both companies act as processors on our behalf, under their standard data-processing terms. We use no other processor, and we sell or share your data with nobody.</p>
+    </section>
+
+    <section id="s5">
+      <h2><span class="num">5</span>What stays on your iPhone</h2>
+      <p>Everything you create is kept in the app's own storage on the device:</p>
       <ul>
         <li>your events, reminders, to-dos and the categories you create;</li>
         <li>your conversation with the assistant, including the proposals it produced;</li>
-        <li>your app preferences — appearance, notification times, time-of-day defaults. These contain no personal information.</li>
+        <li>your app preferences — appearance, notification times, time format, time-of-day defaults. These contain no personal information.</li>
       </ul>
       <p>Sive does <strong>not</strong> read your system Calendar, Reminders, Contacts, Photos, or your location. It keeps its own data and only its own.</p>
       <p><strong>How long we keep it:</strong> we don't keep it at all — you do. It stays on your device until you remove it. Completed to-dos are deleted automatically about 24 hours after you tick them off. You can delete everything at any time in <strong>Settings → Data → Erase all data</strong>, or by deleting the app.</p>
     </section>
 
-    <section id="en-5">
-      <h2><span class="num">5</span>iCloud backup</h2>
+    <section id="s6">
+      <h2><span class="num">6</span>iCloud backup</h2>
       <p>So that your plan survives a lost or replaced phone, Sive stores your events, reminders, to-dos and categories in <strong>your own private iCloud database</strong>, using Apple's CloudKit.</p>
       <p>Three things matter here:</p>
       <ul>
@@ -409,267 +385,91 @@
       <p>You can turn this off in iOS Settings, under your Apple Account → iCloud, by disabling iCloud for Sive. Erasing your data in the app removes it from iCloud too, as long as sync is on.</p>
     </section>
 
-    <section id="en-6">
-      <h2><span class="num">6</span>Permissions</h2>
+    <section id="s7">
+      <h2><span class="num">7</span>Permissions</h2>
       <p>Sive asks for three permissions. All are optional, and each is requested only when you first use the feature that needs it.</p>
       <p><strong>Microphone</strong> — to record you when you dictate instead of typing.</p>
-      <p><strong>Speech recognition</strong> — to turn that recording into text. Sive requires <strong>on-device recognition</strong>, so your audio is not sent to Apple's speech-recognition servers. The recording is not saved; only the resulting text appears in the message box, where you can edit it before sending.</p>
-      <p><strong>Notifications</strong> — to alert you at your reminder times and, if you enable it, to send a daily morning recap. Notifications are scheduled locally by your iPhone. We do not send push notifications and could not — there is no server.</p>
+      <p><strong>Speech recognition</strong> — to turn that recording into text. Sive requires <strong>on-device recognition</strong>, so your audio is not sent to Apple's speech-recognition servers, and it never reaches ours or Google's either. The recording is not saved; only the resulting text appears in the message box, where you can edit it before sending. Once you send it, that text is treated exactly like text you typed (§3).</p>
+      <p><strong>Notifications</strong> — to alert you at your reminder times and, if you enable it, to send a daily morning recap. Notifications are scheduled locally by your iPhone. We do not send push notifications and could not — the relay described in §4 has no way to reach your device.</p>
       <p>You can withdraw any of these at any time in iOS Settings → Sive. The app keeps working; the matching feature simply stops.</p>
     </section>
 
-    <section id="en-7">
-      <h2><span class="num">7</span>Purchases</h2>
-      <p><strong>Sive is free.</strong> There is nothing to buy inside it — no subscription, no paid features, no advertising. The app never asks you for money or for payment details.</p>
-      <p><strong>Later, it won't be.</strong> A paid subscription is planned for a future version. If and when that arrives:</p>
+    <section id="s8">
+      <h2><span class="num">8</span>Purchases</h2>
+      <p>Sive is a paid app, bought through the App Store.</p>
       <ul>
-        <li>Apple handles the purchase, the payment and any refund. We never see your payment details, card number, name or billing address; Apple gives us only aggregated, anonymous sales reports.</li>
-        <li>Your subscription status is checked by the app directly with Apple through StoreKit and remembered on your device, so the app works offline.</li>
+        <li>Apple handles the purchase, the payment, any trial and any refund. <strong>We never see your payment details, card number, name or billing address</strong>; Apple gives us only aggregated, anonymous sales reports.</li>
+        <li>Your purchase status is checked by the app directly with Apple through StoreKit and remembered on your device, so the app opens without a connection.</li>
+        <li>The same Apple-signed purchase record is what the relay uses to confirm you may use the assistant — see §4 for exactly what it contains and what we keep.</li>
         <li>Manage or cancel: iOS Settings → your Apple Account → Subscriptions. Refunds: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
-        <li>This page will be updated before that version is released.</li>
       </ul>
-      <p><strong>If you're using Sive while it's free</strong>, your first year of that future subscription is free. Nothing is collected from you for this — no email address, no account, no sign-up, no list. Eligibility is worked out on your device from Apple's own record of when you first downloaded Sive. That record comes from Apple to your iPhone; nothing about it is sent to us.</p>
     </section>
 
-    <section id="en-8">
-      <h2><span class="num">8</span>The AI assistant</h2>
-      <p>The model that interprets what you write runs <strong>on your iPhone</strong>, using Apple Intelligence. Your text is not uploaded to us, and it is not sent to any AI provider for processing.</p>
-      <p>The assistant can make mistakes — it proposes, and nothing is saved until you approve it.</p>
-    </section>
-
-    <section id="en-9">
-      <h2><span class="num">9</span>Children</h2>
-      <p>Sive is a general-audience productivity app and is not directed at children. We do not knowingly collect data from children, because we do not collect data from anyone.</p>
-    </section>
-
-    <section id="en-10">
-      <h2><span class="num">10</span>Your rights</h2>
-      <p>Under the GDPR you have the rights of access, rectification, erasure, restriction, portability and objection over your personal data, and the right to complain to a supervisory authority.</p>
-      <p>Because we hold none of your data, there is nothing for us to disclose, correct or delete on our side, and no request you need to send us to exercise those rights. In practice:</p>
+    <section id="s9">
+      <h2><span class="num">9</span>Legal bases</h2>
+      <p>Under the GDPR, the processing described above rests on two bases and no others:</p>
       <ul>
-        <li><strong>Access and portability</strong> — your data is visible to you in the app, on your device.</li>
-        <li><strong>Rectification</strong> — edit or delete any item directly in the app.</li>
-        <li><strong>Erasure</strong> — Settings → Data → Erase all data, or delete the app. With sync on, this clears the iCloud copy too.</li>
-        <li><strong>Objection and restriction</strong> — there is no processing by us to object to. You can turn off iCloud sync, dictation or notifications individually at any time.</li>
+        <li><strong>Performance of our contract with you</strong> (Article 6(1)(b)) — sending your message for interpretation when you use the assistant, and confirming that you hold a valid purchase. Without these the app cannot do the thing you bought it for.</li>
+        <li><strong>Our legitimate interests</strong> (Article 6(1)(f)) — the call counters in §4, which exist to stop abuse and keep the cost of running the service bounded. They are kept against a one-way hash precisely so that this interest is served without identifying anyone.</li>
       </ul>
+      <p>We do no marketing, no profiling, no advertising and no tracking, so there is no consent to give and none to withdraw. If you would rather nothing were sent at all, the whole app apart from the chat works offline (§3).</p>
+    </section>
+
+    <section id="s10">
+      <h2><span class="num">10</span>International transfers</h2>
+      <p>Google and Cloudflare are United States companies, and a message you send to the assistant may be processed on infrastructure outside the European Union. Those transfers are covered by the <strong>Standard Contractual Clauses</strong> in each company's data-processing terms, which we have accepted.</p>
+      <p>What is transferred is only what §3 lists, and only when you send the assistant a message. Your planner, your conversation and your settings are not transferred — they stay on your device and in your own iCloud, which is governed by your own agreement with Apple.</p>
+    </section>
+
+    <section id="s11">
+      <h2><span class="num">11</span>Security</h2>
+      <p>Every request leaves your iPhone over an encrypted HTTPS connection and stays encrypted through the relay and on to Google. The relay holds no message content to protect, and the only thing it stores is the counter table described in §4.</p>
+      <p>On the device, your data sits in the app's own storage, protected by your iPhone's passcode and encryption in the same way as any other app's data.</p>
+    </section>
+
+    <section id="s12">
+      <h2><span class="num">12</span>Children</h2>
+      <p>Sive is a general-audience productivity app and is not directed at children. We do not knowingly collect personal data from children — we operate no accounts and ask no one for personal details.</p>
+    </section>
+
+    <section id="s13">
+      <h2><span class="num">13</span>Your rights</h2>
+      <p>Under the GDPR you have the rights of access, rectification, erasure, restriction, portability and objection over your personal data, and the right to complain to a supervisory authority.</p>
+      <p>We hold no copy of your data and no account in your name, so in practice these rights are exercised in the app itself:</p>
+      <ul>
+        <li><strong>Access and portability</strong> — your data is visible to you in the app, on your device. We have no copy to send you.</li>
+        <li><strong>Rectification</strong> — edit or delete any item directly in the app.</li>
+        <li><strong>Erasure</strong> — Settings → Data → Erase all data, or delete the app. With sync on, this clears the iCloud copy too. There is nothing to erase on our side; the short-lived copy Google keeps for abuse detection (§4) expires on its own and carries nothing linking it to you.</li>
+        <li><strong>Objection and restriction</strong> — stop using the chat and no message will be sent; every other part of the app keeps working. You can also turn off iCloud sync, dictation or notifications individually at any time.</li>
+      </ul>
+      <p>You are welcome to write to us at any time about any of this, at <a href="mailto:sive.app282@gmail.com">sive.app282@gmail.com</a>.</p>
       <p>For the data Apple holds — your iCloud content, and anything attached to your App Store account — Apple is the point of contact: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>.</p>
       <p>If you believe your rights have not been respected, you can lodge a complaint with the <strong>CNIL</strong> (<a href="https://www.cnil.fr">cnil.fr</a>) or with the supervisory authority of the EU country where you live.</p>
     </section>
 
-    <section id="en-11">
-      <h2><span class="num">11</span>Automated decision-making</h2>
-      <p>The assistant reads what you write and proposes events, reminders and to-dos. It never acts on its own: every proposal is shown to you and saved only if you approve it. No decision producing legal or similarly significant effects is made about you.</p>
+    <section id="s14">
+      <h2><span class="num">14</span>Automated decision-making</h2>
+      <p>The assistant reads what you write and proposes events, reminders and to-dos. It never acts on its own: every proposal is shown to you and saved only if you approve it. AI can make mistakes, and this one does — reviewing the card before approving it is the design, not a formality. No decision producing legal or similarly significant effects is made about you.</p>
     </section>
 
-    <section id="en-12">
-      <h2><span class="num">12</span>International transfers</h2>
-      <p>None. We transfer nothing, because we receive nothing. Any transfer involved in your use of iCloud is governed by your agreement with Apple.</p>
-    </section>
-
-    <section id="en-13">
-      <h2><span class="num">13</span>Changes to this policy</h2>
+    <section id="s15">
+      <h2><span class="num">15</span>Changes to this policy</h2>
       <p>If this policy changes, we will update this page and the date at the top. If a change is significant, we will also tell you in the app.</p>
     </section>
 
-    <section id="en-14">
-      <h2><span class="num">14</span>Contact</h2>
+    <section id="s16">
+      <h2><span class="num">16</span>Contact</h2>
       <p><a href="mailto:sive.app282@gmail.com">sive.app282@gmail.com</a> — Svitlana Doinikova, France.</p>
     </section>
 
     <footer>
-      <p>Sive — a planner that keeps your plans to itself.</p>
+      <p>Sive — a planner for the way you actually think.</p>
+      <p><a href="./support.html">Support</a></p>
       <a class="totop" href="#top">Back to top ↑</a>
     </footer>
 
   </main>
 
-  <!-- ============================== FRANÇAIS ============================== -->
-  <main data-content="fr" hidden>
-
-    <div class="summary">
-      <p class="label">En bref</p>
-      <p>Sive fonctionne entièrement sur votre iPhone. L'application n'a aucun serveur, n'effectue aucune requête réseau et ne contient ni outil de mesure d'audience, ni publicité, ni traceur, ni aucun code tiers. <strong>Rien de ce que vous écrivez, dictez ou enregistrez ne nous est transmis</strong>&nbsp;: nous n'avons aucun moyen de le recevoir, ni de le lire.</p>
-      <p>Vos données sont conservées sur votre appareil et sauvegardées sur votre propre compte iCloud privé, auquel nous n'avons pas accès.</p>
-      <p class="lede">Le détail se trouve ci-dessous. Il est court.</p>
-    </div>
-
-    <nav class="toc" aria-label="Sommaire">
-      <h2>Sommaire</h2>
-      <ol>
-        <li><a href="#fr-1">Éditeur de l'application</a></li>
-        <li><a href="#fr-2">Ce que fait Sive</a></li>
-        <li><a href="#fr-3">Données collectées&nbsp;: aucune</a></li>
-        <li><a href="#fr-4">Données conservées sur votre iPhone</a></li>
-        <li><a href="#fr-5">Sauvegarde iCloud</a></li>
-        <li><a href="#fr-6">Autorisations</a></li>
-        <li><a href="#fr-7">Achats</a></li>
-        <li><a href="#fr-8">L'assistant IA</a></li>
-        <li><a href="#fr-9">Mineurs</a></li>
-        <li><a href="#fr-10">Vos droits</a></li>
-        <li><a href="#fr-11">Décision automatisée</a></li>
-        <li><a href="#fr-12">Transferts hors UE</a></li>
-        <li><a href="#fr-13">Modifications</a></li>
-        <li><a href="#fr-14">Contact</a></li>
-      </ol>
-    </nav>
-
-    <section id="fr-1">
-      <h2><span class="num">1</span>Éditeur de l'application</h2>
-      <p>Sive est édité par <strong>Svitlana Doinikova</strong>, développeuse indépendante en France.</p>
-      <ul>
-        <li>Courriel&nbsp;: <a href="mailto:sive.app282@gmail.com">sive.app282@gmail.com</a></li>
-      </ul>
-      <p>C'est le seul moyen de nous joindre, et le seul dont vous ayez besoin&nbsp;: nous ne détenons aucune donnée vous concernant que vous auriez à nous réclamer.</p>
-      <p>Apple distribue l'application sur l'App Store. <strong>Sive est gratuite</strong>&nbsp;; il n'y a rien à acheter à l'intérieur (voir §7).</p>
-    </section>
-
-    <section id="fr-2">
-      <h2><span class="num">2</span>Ce que fait Sive</h2>
-      <p>Sive transforme des notes du quotidien — saisies ou dictées — en événements d'agenda, rappels et tâches. L'interprétation est réalisée par un modèle d'intelligence artificielle qui s'exécute sur votre iPhone. Vous relisez et validez chaque résultat avant tout enregistrement.</p>
-    </section>
-
-    <section id="fr-3">
-      <h2><span class="num">3</span>Données que nous collectons&nbsp;: aucune</h2>
-      <p>Nous n'exploitons aucun serveur. L'application ne contient aucun SDK de mesure d'audience, aucun SDK de rapport d'incident, aucun SDK publicitaire, aucune technologie de suivi et aucune bibliothèque tierce. Elle ne nous transmet rien, faute d'un endroit où transmettre quoi que ce soit.</p>
-      <p>Concrètement, nous ne collectons, ne recevons, ne conservons, ne vendons et ne partageons&nbsp;:</p>
-      <ul>
-        <li>rien de ce que vous saisissez ou dictez dans l'application&nbsp;;</li>
-        <li>aucun de vos événements, rappels, tâches ou catégories&nbsp;;</li>
-        <li>aucune de vos conversations avec l'assistant&nbsp;;</li>
-        <li>aucun identifiant, information sur votre appareil, statistique d'usage, donnée de localisation ni contact.</li>
-      </ul>
-      <p>La seule activité réseau que l'application peut provoquer est celle d'Apple&nbsp;: l'ouverture d'un lien dans votre navigateur (la présente politique, ou l'App Store), la synchronisation iCloud décrite au §5, et la vérification auprès de l'App Store de l'existence d'un abonnement (§7). Ces trois échanges ont lieu avec Apple, dans le cadre de votre contrat avec Apple. Aucun ne nous parvient.</p>
-      <p>Si vous avez activé <strong>Partager les analyses de l'iPhone avec les développeurs</strong> dans les Réglages iOS, Apple peut nous communiquer des rapports d'incident et de performance agrégés et anonymes concernant l'application. Ils proviennent d'Apple, ne contiennent aucune donnée personnelle et ne permettent pas de remonter jusqu'à vous. Vous pouvez désactiver ce partage dans Réglages → Confidentialité et sécurité → Analyse et améliorations.</p>
-    </section>
-
-    <section id="fr-4">
-      <h2><span class="num">4</span>Données conservées sur votre iPhone</h2>
-      <p>Tout ce que vous créez reste dans l'espace de stockage propre à l'application, sur l'appareil&nbsp;:</p>
-      <ul>
-        <li>vos événements, rappels, tâches et les catégories que vous créez&nbsp;;</li>
-        <li>votre conversation avec l'assistant, y compris les propositions qu'il a produites&nbsp;;</li>
-        <li>vos préférences — apparence, horaires de notification, repères horaires de la journée. Elles ne contiennent aucune donnée personnelle.</li>
-      </ul>
-      <p>Sive <strong>ne lit pas</strong> votre Calendrier système, vos Rappels, vos Contacts, vos Photos, ni votre position. L'application ne manipule que ses propres données.</p>
-      <p><strong>Durée de conservation&nbsp;:</strong> nous ne conservons rien — c'est vous qui conservez. Les données restent sur votre appareil jusqu'à ce que vous les supprimiez. Les tâches terminées sont supprimées automatiquement environ 24&nbsp;heures après avoir été cochées. Vous pouvez tout effacer à tout moment via <strong>Réglages → Données → Tout effacer</strong>, ou en supprimant l'application.</p>
-    </section>
-
-    <section id="fr-5">
-      <h2><span class="num">5</span>Sauvegarde iCloud</h2>
-      <p>Afin que votre organisation survive à la perte ou au remplacement de votre téléphone, Sive enregistre vos événements, rappels, tâches et catégories dans <strong>votre propre base de données iCloud privée</strong>, via CloudKit d'Apple.</p>
-      <p>Trois points importants&nbsp;:</p>
-      <ul>
-        <li>Il s'agit de <strong>votre</strong> compte iCloud, dans sa base privée. Nous n'y avons pas accès, nous ne pouvons pas la lire, et aucune copie ne nous est transmise.</li>
-        <li>Votre <strong>conversation avec l'assistant n'est pas synchronisée.</strong> Elle reste uniquement sur l'appareil.</li>
-        <li>Apple traite ces données dans le cadre de votre service iCloud, conformément à sa propre politique de confidentialité et aux conditions iCloud.</li>
-      </ul>
-      <p>Vous pouvez désactiver cette sauvegarde dans les Réglages iOS, sous votre compte Apple → iCloud, en désactivant iCloud pour Sive. Effacer vos données depuis l'application les supprime également d'iCloud, dès lors que la synchronisation est active.</p>
-    </section>
-
-    <section id="fr-6">
-      <h2><span class="num">6</span>Autorisations</h2>
-      <p>Sive demande trois autorisations. Toutes sont facultatives et ne sont demandées qu'au premier usage de la fonction concernée.</p>
-      <p><strong>Microphone</strong> — pour vous enregistrer lorsque vous dictez au lieu d'écrire.</p>
-      <p><strong>Reconnaissance vocale</strong> — pour convertir cet enregistrement en texte. Sive impose une <strong>reconnaissance sur l'appareil</strong>&nbsp;: votre audio n'est donc pas transmis aux serveurs de reconnaissance vocale d'Apple. L'enregistrement n'est pas conservé&nbsp;; seul le texte obtenu apparaît dans le champ de saisie, où vous pouvez le corriger avant de l'envoyer.</p>
-      <p><strong>Notifications</strong> — pour vous alerter à l'heure de vos rappels et, si vous l'activez, vous envoyer un récapitulatif quotidien le matin. Les notifications sont programmées localement par votre iPhone. Nous n'envoyons aucune notification push et ne le pourrions pas&nbsp;: il n'y a aucun serveur.</p>
-      <p>Vous pouvez retirer chacune de ces autorisations à tout moment dans Réglages iOS → Sive. L'application continue de fonctionner&nbsp;; seule la fonction concernée s'arrête.</p>
-    </section>
-
-    <section id="fr-7">
-      <h2><span class="num">7</span>Achats</h2>
-      <p><strong>Sive est gratuite.</strong> Il n'y a rien à acheter à l'intérieur&nbsp;: aucun abonnement, aucune fonction payante, aucune publicité. L'application ne vous demande jamais d'argent ni de moyen de paiement.</p>
-      <p><strong>Elle ne le restera pas.</strong> Un abonnement payant est prévu pour une future version. Le cas échéant&nbsp;:</p>
-      <ul>
-        <li>Apple gère l'achat, le paiement et tout remboursement. Nous n'avons jamais accès à vos moyens de paiement, votre numéro de carte, votre nom ou votre adresse de facturation&nbsp;; Apple ne nous communique que des rapports de ventes agrégés et anonymes.</li>
-        <li>L'état de votre abonnement est vérifié par l'application directement auprès d'Apple, via StoreKit, et mémorisé sur votre appareil pour un fonctionnement hors ligne.</li>
-        <li>Gérer ou résilier&nbsp;: Réglages iOS → votre compte Apple → Abonnements. Remboursements&nbsp;: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
-        <li>Cette page sera mise à jour avant la sortie de cette version.</li>
-      </ul>
-      <p><strong>Si vous utilisez Sive pendant qu'elle est gratuite</strong>, votre première année de ce futur abonnement sera offerte. Rien n'est collecté auprès de vous pour cela&nbsp;: ni adresse électronique, ni compte, ni inscription, ni liste. L'éligibilité est déterminée sur votre appareil, à partir du relevé d'Apple indiquant la date de votre premier téléchargement de Sive. Ce relevé est transmis par Apple à votre iPhone&nbsp;; rien ne nous en est communiqué.</p>
-    </section>
-
-    <section id="fr-8">
-      <h2><span class="num">8</span>L'assistant IA</h2>
-      <p>Le modèle qui interprète ce que vous écrivez s'exécute <strong>sur votre iPhone</strong>, au moyen d'Apple Intelligence. Votre texte ne nous est pas transmis et n'est envoyé à aucun fournisseur d'IA pour traitement.</p>
-      <p>L'assistant peut se tromper&nbsp;: il propose, et rien n'est enregistré tant que vous ne l'avez pas validé.</p>
-    </section>
-
-    <section id="fr-9">
-      <h2><span class="num">9</span>Mineurs</h2>
-      <p>Sive est une application de productivité tout public, qui ne s'adresse pas aux enfants. Nous ne collectons sciemment aucune donnée concernant des enfants, puisque nous ne collectons aucune donnée de qui que ce soit.</p>
-    </section>
-
-    <section id="fr-10">
-      <h2><span class="num">10</span>Vos droits</h2>
-      <p>Le RGPD vous confère des droits d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition sur vos données à caractère personnel, ainsi que le droit d'introduire une réclamation auprès d'une autorité de contrôle.</p>
-      <p>Comme nous ne détenons aucune de vos données, nous n'avons rien à vous communiquer, rectifier ou effacer de notre côté, et aucune demande ne doit nous être adressée pour exercer ces droits. Concrètement&nbsp;:</p>
-      <ul>
-        <li><strong>Accès et portabilité</strong> — vos données vous sont visibles dans l'application, sur votre appareil.</li>
-        <li><strong>Rectification</strong> — modifiez ou supprimez n'importe quel élément directement dans l'application.</li>
-        <li><strong>Effacement</strong> — Réglages → Données → Tout effacer, ou suppression de l'application. Synchronisation active, la copie iCloud est également supprimée.</li>
-        <li><strong>Opposition et limitation</strong> — il n'existe aucun traitement de notre part auquel vous opposer. Vous pouvez désactiver à tout moment, séparément, la synchronisation iCloud, la dictée ou les notifications.</li>
-      </ul>
-      <p>Pour les données détenues par Apple — votre contenu iCloud, et tout ce qui est rattaché à votre compte App Store — l'interlocuteur est Apple&nbsp;: <a href="https://www.apple.com/fr/legal/privacy/">apple.com/fr/legal/privacy</a>.</p>
-      <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la <strong>CNIL</strong> (<a href="https://www.cnil.fr">cnil.fr</a>) ou de l'autorité de contrôle du pays de l'Union européenne où vous résidez.</p>
-    </section>
-
-    <section id="fr-11">
-      <h2><span class="num">11</span>Décision automatisée</h2>
-      <p>L'assistant lit ce que vous écrivez et propose des événements, rappels et tâches. Il n'agit jamais de lui-même&nbsp;: chaque proposition vous est présentée et n'est enregistrée que si vous la validez. Aucune décision produisant des effets juridiques ou vous affectant de manière significative n'est prise à votre égard.</p>
-    </section>
-
-    <section id="fr-12">
-      <h2><span class="num">12</span>Transferts hors de l'Union européenne</h2>
-      <p>Aucun. Nous ne transférons rien, puisque nous ne recevons rien. Les transferts éventuellement liés à votre utilisation d'iCloud relèvent de votre contrat avec Apple.</p>
-    </section>
-
-    <section id="fr-13">
-      <h2><span class="num">13</span>Modifications de la présente politique</h2>
-      <p>En cas de modification, nous mettrons à jour cette page ainsi que la date figurant en tête. Si un changement est important, nous vous en informerons également dans l'application.</p>
-    </section>
-
-    <section id="fr-14">
-      <h2><span class="num">14</span>Contact</h2>
-      <p><a href="mailto:sive.app282@gmail.com">sive.app282@gmail.com</a> — Svitlana Doinikova, France.</p>
-    </section>
-
-    <footer>
-      <p>Sive — un agenda qui garde vos plans pour lui.</p>
-      <a class="totop" href="#top">Haut de page ↑</a>
-    </footer>
-
-  </main>
-
 </div>
-
-<script>
-  // Language switch. No storage, no tracking — the initial choice comes from the
-  // browser's own language, and ?lang=fr / #fr let you link straight to a version.
-  (function () {
-    var buttons = document.querySelectorAll('.lang button');
-    var titles = { en: 'Sive — Privacy Policy', fr: 'Sive — Politique de confidentialité' };
-
-    function show(lang) {
-      document.querySelectorAll('[data-content]').forEach(function (el) {
-        el.hidden = el.getAttribute('data-content') !== lang;
-      });
-      buttons.forEach(function (b) {
-        b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang));
-      });
-      document.documentElement.lang = lang;
-      document.title = titles[lang];
-    }
-
-    buttons.forEach(function (b) {
-      b.addEventListener('click', function () { show(b.getAttribute('data-lang')); });
-    });
-
-    var requested = new URLSearchParams(location.search).get('lang');
-    if (!requested && location.hash.replace('#', '') === 'fr') requested = 'fr';
-    if (!requested && (navigator.language || '').toLowerCase().indexOf('fr') === 0) requested = 'fr';
-    if (requested === 'fr') show('fr');
-  })();
-</script>
-
 </body>
 </html>
