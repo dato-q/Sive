@@ -271,7 +271,7 @@
 
     <h1>Privacy Policy</h1>
     <p class="meta">
-      Last updated 7 September 2026 · Applies to Sive for iPhone
+      Last updated 11 September 2026 · Applies to Sive for iPhone
     </p>
   </header>
 
@@ -350,14 +350,14 @@
 
     <section id="s4">
       <h2><span class="num">4</span>Who handles it</h2>
-      <p>Two companies are involved in that round trip. Neither keeps anything of yours afterwards, and neither is given anything that identifies you.</p>
+      <p>Two companies are involved in that round trip. Neither is given your name, your email address or your Apple Account, and neither keeps your message beyond what is described below.</p>
 
       <p><strong>Google</strong> — the model is Gemini, operated by Google, and it is what actually reads your message and produces the proposal or the answer. We use the <strong>paid</strong> Gemini API, which matters: under its terms <strong>your content is not used to train or improve Google's models</strong>, and it is not read by people in the ordinary course of business. Google retains it only for a short period, to detect abuse and to meet its legal obligations, and then deletes it. Google's terms are at <a href="https://ai.google.dev/gemini-api/terms">ai.google.dev/gemini-api/terms</a>.</p>
 
-      <p><strong>Cloudflare</strong> — the request does not go to Google directly. It passes through a small relay we operate on Cloudflare's network, and it exists for one reason: the credential that authorises the call to Google cannot safely be placed inside an app on your phone, so it lives on the relay instead. The relay checks that the request comes from a valid Sive purchase, counts it, and forwards it.</p>
+      <p><strong>Cloudflare</strong> — the request does not go to Google directly. It passes through a small relay we operate on Cloudflare's network, and it exists for one reason: the credential that authorises the call to Google cannot safely be placed inside an app on your phone, so it lives on the relay instead. The relay checks that the request comes from a valid Sive purchase — or, during setup, that it stays within a small free allowance (see below) — counts it, and forwards it.</p>
       <p><strong>The relay never stores or logs your message or the reply.</strong> No message text, no answer text, ever — not in a database, not in a log line. What it does store is a call counter, so that a single purchase cannot run up an unbounded bill. That counter is kept against a <strong>one-way salted hash</strong> of the purchase identifier Apple gives your app, which means we can see that some purchase made a number of calls this month and cannot work back from it to a purchase, an Apple Account or a person.</p>
       <p>To prove you are entitled to use the assistant, your app sends that Apple-signed purchase record with each request. It contains no name, no email address and no payment information — Apple does not put them in it — and we keep only the hash just described.</p>
-      <p><strong>Before you have bought anything</strong> — the first task you type during setup, which happens before the purchase screen — there is no purchase record yet, so the app sends Apple's signed record of the <em>download</em> instead. It carries no name, email or payment information either. The relay allows it a small, separate number of calls, counted against a one-way salted hash of the identifier Apple attaches to that download, and again keeps only that hash.</p>
+      <p><strong>Before you have bought anything</strong> — the messages you type during setup, which happens before the purchase screen — there is no purchase record yet, and the app sends no credential at all. To keep those free messages bounded, the relay counts them against your <strong>network address</strong>: the internet address every connection comes from, or, for the newer IPv6 kind, only the part that identifies your network. It never stores the address itself — only a salted hash of it, next to a count of calls. Be aware of one difference from the purchase hash above: there are few enough possible addresses that we, holding the salt, could in principle check whether a given address produced a given hash. We never do, we keep no list of addresses to check against, and the hash is used for nothing but counting.</p>
 
       <p>Both companies act as processors on our behalf, under their standard data-processing terms. We use no other processor, and we sell or share your data with nobody.</p>
     </section>
@@ -401,7 +401,7 @@
       <ul>
         <li>Apple handles the purchase, the payment, any trial and any refund. <strong>We never see your payment details, card number, name or billing address</strong>; Apple gives us only aggregated, anonymous sales reports.</li>
         <li>Your purchase status is checked by the app directly with Apple through StoreKit and remembered on your device, so the app opens without a connection.</li>
-        <li>The same Apple-signed purchase record (or, before you have bought anything, the download record) is what the relay uses to confirm you may use the assistant — see §4 for exactly what it contains and what we keep.</li>
+        <li>The same Apple-signed purchase record is what the relay uses to confirm you may use the assistant. Before you have bought anything, the app sends no record and the relay counts your messages by network address instead — see §4 for exactly what is sent and what we keep.</li>
         <li>Manage or cancel: iOS Settings → your Apple Account → Subscriptions. Refunds: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
       </ul>
     </section>
@@ -411,7 +411,7 @@
       <p>Under the GDPR, the processing described above rests on two bases and no others:</p>
       <ul>
         <li><strong>Performance of our contract with you</strong> (Article 6(1)(b)) — sending your message for interpretation when you use the assistant, and confirming that you hold a valid purchase. Without these the app cannot do the thing you bought it for.</li>
-        <li><strong>Our legitimate interests</strong> (Article 6(1)(f)) — the call counters in §4, which exist to stop abuse and keep the cost of running the service bounded. They are kept against a one-way hash precisely so that this interest is served without identifying anyone.</li>
+        <li><strong>Our legitimate interests</strong> (Article 6(1)(f)) — the call counters in §4, which exist to stop abuse and keep the cost of running the service bounded. They are kept against a salted hash, never the identifier or address itself, so that this interest is served with as little data as possible — §4 explains what each hash is made from, and how far it can be traced.</li>
       </ul>
       <p>We do no marketing, no profiling, no advertising and no tracking, so there is no consent to give and none to withdraw. If you would rather nothing were sent at all, the whole app apart from the chat works offline (§3).</p>
     </section>
